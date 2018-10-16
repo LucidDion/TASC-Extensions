@@ -31,8 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="QuantaculaCore">
+      <HintPath>..\..\..\..\Quantacula6\QuantacularCore\bin\Debug\QuantaculaCore.dll</HintPath>
+    </Reference>
+    <Reference Include="QuantaculaIndicators">
+      <HintPath>..\..\..\..\Quantacula6\QuantaculaIndicators\bin\Debug\QuantaculaIndicators.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AMA.cs" />
+    <Compile Include="DPPO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RMF.cs" />
+    <Compile Include="RMO.cs" />
+    <Compile Include="RocketRSI.cs" />
+    <Compile Include="Stiffness.cs" />
+    <Compile Include="WDPPO.cs" />
+    <Compile Include="WPPO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
