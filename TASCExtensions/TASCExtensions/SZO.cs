@@ -57,7 +57,7 @@ namespace TASCIndicators
                     R[bar] = (ds[bar] > ds[bar - 1]) ? 1 : -1;
             }
 
-            var sp = new TEMA(R, period);
+            var sp = new TEMA_TASC(R, period);
 
             for (int bar = 0; bar < ds.Count; bar++)
             {

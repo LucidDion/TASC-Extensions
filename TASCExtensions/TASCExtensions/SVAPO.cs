@@ -64,7 +64,7 @@ namespace TASCIndicators
             #endregion
 
             //Smooth Heikin-Ashi closing price
-            HC = new TEMA(HC, Math.Max((int)1, Convert.ToInt32(period / 1.6d)));
+            HC = new TEMA_TASC(HC, Math.Max((int)1, Convert.ToInt32(period / 1.6d)));
 
             //Medium term MA of Volume to limit extremes and division factor
             var vave = new SMA(bars.Volume, period * 5) >> 1;
@@ -79,7 +79,7 @@ namespace TASCIndicators
             }
 
             //Basic volume trend
-            var vtr = new TEMA(new LRSlope(bars.Volume, period), period);
+            var vtr = new TEMA_TASC(new LRSlope(bars.Volume, period), period);
 
             //SVAPO result of price and volume}
             var tempSeries = new TimeSeries(DateTimes);
@@ -100,7 +100,7 @@ namespace TASCIndicators
             }
             
             var sumSeries = tempSeries.Sum(period);
-            var svapo = new TEMA((sumSeries + vave + 1), period);   
+            var svapo = new TEMA_TASC((sumSeries + vave + 1), period);   
 
             for (int bar = period; bar < bars.Count; bar++)
             {

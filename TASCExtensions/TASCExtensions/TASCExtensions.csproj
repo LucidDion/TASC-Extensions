@@ -141,7 +141,7 @@
     <Compile Include="SZO.cs" />
     <Compile Include="TCFMinus.cs" />
     <Compile Include="TCFPlus.cs" />
-    <Compile Include="TEMA.cs" />
+    <Compile Include="TEMA_TASC.cs" />
     <Compile Include="TrendB.cs" />
     <Compile Include="TrendQ.cs" />
     <Compile Include="TrueHigh.cs" />

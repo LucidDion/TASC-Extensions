@@ -10,15 +10,15 @@ namespace TASCIndicators
     /// <summary>
     /// TEMA (Triple-Smoothed Exponential Moving Average) Indicator
     /// </summary>
-    public class TEMA : IndicatorBase
+    public class TEMA_TASC : IndicatorBase
     {
         //parameterless constructor
-        public TEMA() : base()
+        public TEMA_TASC() : base()
         {
         }
 
         //for code based construction
-        public TEMA(TimeSeries source, Int32 period)
+        public TEMA_TASC(TimeSeries source, Int32 period)
             : base()
         {
             Parameters[0].Value = source;

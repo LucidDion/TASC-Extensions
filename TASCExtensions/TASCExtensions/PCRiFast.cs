@@ -59,7 +59,7 @@ namespace TASCIndicators
                 else if (ds[bar] < 0.45) ds[bar] = 0.45;
             }
             // TEMA smoothing
-            ds = new TEMA(ds, 5);
+            ds = new TEMA_TASC(ds, 5);
 
             // Rainbow smoothing			
             var rbw = new TimeSeries(DateTimes);

@@ -67,12 +67,12 @@ namespace TASCIndicators
 					+ Math.Min(ds.Low[bar], _haOpen[bar]) ) / 4d;
 			}
 
-            var TMA1 = new TEMA(_haC, periodSmooth);
-            var TMA2 = new TEMA(TMA1, periodSmooth);
+            var TMA1 = new TEMA_TASC(_haC, periodSmooth);
+            var TMA2 = new TEMA_TASC(TMA1, periodSmooth);
             var Diff = TMA1 - TMA2;
             var ZLHA = TMA1 + Diff;
 
-            var temaZLHA = new TEMA(ZLHA, periodSmooth);
+            var temaZLHA = new TEMA_TASC(ZLHA, periodSmooth);
             var _sd = new StdDev(temaZLHA, period);
             var _wma = new WMA(temaZLHA, period);
 

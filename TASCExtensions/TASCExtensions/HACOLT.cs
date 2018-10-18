@@ -89,13 +89,13 @@ namespace TASCIndicators
 
             /* Create "Crossover Formula" */
 
-            var TMA1 = new TEMA(haC, period);
-            var TMA2 = new TEMA(TMA1, period);
+            var TMA1 = new TEMA_TASC(haC, period);
+            var TMA2 = new TEMA_TASC(TMA1, period);
             var Diff = TMA1 - TMA2;
             var ZlHa = TMA1 + Diff;
             var AveragePrice = (bars.High + bars.Low) / 2;
-            TMA1 = new TEMA(AveragePrice, period);
-            TMA2 = new TEMA(TMA1, period);
+            TMA1 = new TEMA_TASC(AveragePrice, period);
+            TMA2 = new TEMA_TASC(TMA1, period);
             Diff = TMA1 - TMA2;
             var ZlCl = TMA1 + Diff;
             var ZlDif = ZlCl - ZlHa;

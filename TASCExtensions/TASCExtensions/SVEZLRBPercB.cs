@@ -62,7 +62,7 @@ namespace TASCIndicators
             TimeSeries ema2 = new EMA(ema1, smooth);
             TimeSeries diff = ema1 - ema2;
             TimeSeries ZLRB = ema1 + diff;
-            TEMA tema = new TEMA(ZLRB, smooth);
+            TEMA_TASC tema = new TEMA_TASC(ZLRB, smooth);
             StdDev sd = new StdDev(tema, sdPeriod);
             WMA wma = new WMA(tema, sdPeriod);
             var PB = (tema + sd * 2 - wma) / (sd * 4) * 100;
