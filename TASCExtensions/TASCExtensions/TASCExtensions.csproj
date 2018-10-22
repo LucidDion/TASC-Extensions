@@ -69,6 +69,7 @@
     <Compile Include="EC.cs" />
     <Compile Include="EMA2.cs" />
     <Compile Include="ESDBands.cs" />
+    <Compile Include="FAMA.cs" />
     <Compile Include="FastSMA.cs" />
     <Compile Include="FDSO.cs" />
     <Compile Include="FIRSmoother.cs" />
@@ -87,6 +88,8 @@
     <Compile Include="InverseFisher.cs" />
     <Compile Include="InverseFisherRSI.cs" />
     <Compile Include="InverseFisherStoch.cs" />
+    <Compile Include="MAMA.cs" />
+    <Compile Include="MamaFamaCalculator.cs" />
     <Compile Include="MESAStochastic.cs" />
     <Compile Include="MHLMA.cs" />
     <Compile Include="Midas.cs" />
