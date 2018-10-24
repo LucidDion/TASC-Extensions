@@ -53,6 +53,7 @@
     <Compile Include="APTR.cs" />
     <Compile Include="ARSI.cs" />
     <Compile Include="ATRModified.cs" />
+    <Compile Include="ATRTrail.cs" />
     <Compile Include="BearPowerVG.cs" />
     <Compile Include="BollingerPctB.cs" />
     <Compile Include="BollingerPctBSmoothed.cs" />
