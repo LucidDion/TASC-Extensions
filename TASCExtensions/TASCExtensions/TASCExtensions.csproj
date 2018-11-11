@@ -103,6 +103,7 @@
     <Compile Include="PCRiFast.cs" />
     <Compile Include="PCRiSlow.cs" />
     <Compile Include="PCRiSlowIFT.cs" />
+    <Compile Include="PFE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PTBar.cs" />
     <Compile Include="PVI.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="SVEHLZZperc.cs" />
     <Compile Include="SVERBStochK.cs" />
     <Compile Include="SVEVolatilityBands.cs" />
+    <Compile Include="SveVolatilityBands2.cs" />
     <Compile Include="SVEZLRBPercB.cs" />
     <Compile Include="SVSI.cs" />
     <Compile Include="SZO.cs" />
