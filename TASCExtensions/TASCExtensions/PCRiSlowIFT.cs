@@ -41,7 +41,10 @@ namespace TASCIndicators
         //populate
         public override void Populate()
         {
-            TimeSeries ds = Parameters[0].AsTimeSeries;
+            TimeSeries source = Parameters[0].AsTimeSeries;
+            TimeSeries ds = new TimeSeries(source.DateTimes, false);
+            ds.Values.AddRange(source.Values);
+
             Int32 rainbowPeriod = Parameters[1].AsInt;
             Int32 wmaSmoothingPeriod = Parameters[2].AsInt;
             Int32 rsiPeriod = Parameters[3].AsInt;
