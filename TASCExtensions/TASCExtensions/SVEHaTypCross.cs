@@ -71,7 +71,7 @@ namespace TASCIndicators
 
             // Build EMA of Heikin-Ashi close and EMA of Typical price
             var haEma = new EMA(b.Close, haPeriod);
-            var tpEma = new EMA(bars.AveragePriceC, typPeriod);
+            var tpEma = new EMA(bars.AveragePriceHLC, typPeriod);
 
             double cross = 0;
 

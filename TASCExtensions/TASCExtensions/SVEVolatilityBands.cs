@@ -20,7 +20,7 @@ namespace TASCIndicators
 
         public override Color DefaultColor => Color.Silver;
 
-        public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
+        public override PlotStyles DefaultPlotStyle => PlotStyles.Bands;
 
         public override List<string> Companions => new List<string>() { "SVEVolatilityBandLower" };
 
@@ -70,7 +70,7 @@ namespace TASCIndicators
             if (bars.Count < Math.Max(BandAverage, VolPeriod))
                 return;
 
-            var TypicalPrice = bars.AveragePriceC;
+            var TypicalPrice = bars.AveragePriceHLC;
             TimeSeries typical = new TimeSeries(DateTimes);
             TimeSeries deviation = new TimeSeries(DateTimes);
             TimeSeries medianaverage = new TimeSeries(DateTimes);
@@ -128,7 +128,7 @@ namespace TASCIndicators
 
         public override Color DefaultColor => Color.Silver;
 
-        public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
+        public override PlotStyles DefaultPlotStyle => PlotStyles.Bands;
 
         public override List<string> Companions => new List<string>() { "SVEVolatilityBandUpper" };
 
@@ -178,7 +178,7 @@ namespace TASCIndicators
             if (bars.Count < Math.Max(BandAverage, VolPeriod))
                 return;
 
-            var TypicalPrice = bars.AveragePriceC;
+            var TypicalPrice = bars.AveragePriceHLC;
             var typical = new TimeSeries(DateTimes);
             var deviation = new TimeSeries(DateTimes);
             var medianaverage = new TimeSeries(DateTimes);

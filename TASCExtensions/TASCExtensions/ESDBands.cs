@@ -132,7 +132,8 @@ namespace TASCIndicators
 
         public override Color DefaultColor => Color.Navy;
 
-        public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
+        //bands
+        public override PlotStyles DefaultPlotStyle => PlotStyles.Bands;
 
         public override List<string> Companions => new List<string>() { "ESDBandLower" };
     }
@@ -194,7 +195,7 @@ namespace TASCIndicators
 
         public override Color DefaultColor => Color.Navy;
 
-        public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
+        public override PlotStyles DefaultPlotStyle => PlotStyles.Bands;
 
         public override List<string> Companions => new List<string>() { "ESDBandUpper" };
     }

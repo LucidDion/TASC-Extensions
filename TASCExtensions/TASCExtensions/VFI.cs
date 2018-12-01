@@ -63,7 +63,7 @@ namespace TASCIndicators
             // 'Typical' is the AveragePriceC.Series in WLP
             for (int bar = 1; bar < bars.Count; bar++)
             {
-                dsInter[bar] = Math.Log(bars.AveragePriceC[bar]) - Math.Log(bars.AveragePriceC[bar - 1]);
+                dsInter[bar] = Math.Log(bars.AveragePriceHLC[bar]) - Math.Log(bars.AveragePriceHLC[bar - 1]);
             }
 
             // StdDev over 30-day time period (30 bars)
@@ -74,7 +74,7 @@ namespace TASCIndicators
             var dsAve = new FastSMA(bars.Volume, period) >> 1;
             var dsMax = dsAve * curtailCoeff;
 
-            var dsMF = bars.AveragePriceC - (bars.AveragePriceC >> 1);
+            var dsMF = bars.AveragePriceHLC - (bars.AveragePriceHLC >> 1);
             var dsSer = new TimeSeries(DateTimes);
             var dsVFI = new TimeSeries(DateTimes);
 

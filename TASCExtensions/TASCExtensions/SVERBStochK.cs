@@ -58,7 +58,7 @@ namespace TASCIndicators
             TimeSeries sma10 = new FastSMA(sma9, 2);
             TimeSeries Rainbow = (sma1 + sma2 + sma3 + sma4 + sma5 + sma6 + sma7 + sma8 + sma9 + sma10) / 20;
 
-            TimeSeries RBC = (Rainbow + bars.AveragePriceC) / 2;
+            TimeSeries RBC = (Rainbow + bars.AveragePriceHLC) / 2;
             TimeSeries nom = RBC - new Lowest(bars.Low, periodK);
             TimeSeries den = new Highest(bars.High, periodK) - new Lowest(RBC, periodK);
 

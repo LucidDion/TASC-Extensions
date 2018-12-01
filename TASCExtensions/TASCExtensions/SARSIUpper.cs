@@ -76,7 +76,7 @@ namespace QuantaculaIndicators
         {
             get
             {
-                return PlotStyles.Line;
+                return PlotStyles.Bands;
             }
         }
 
