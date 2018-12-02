@@ -55,9 +55,8 @@ namespace QuantaculaIndicators
 			var rsi = new RSI(ds, rsiPeriod);
 
 			// Buffering the Highest High and lowest low RSI during the Stochastic lookback period
-			var StochLookbackperiod = 5; // Stochastic Lookback Bars
-			var HiRSI_Buffer = Highest.Series(rsi, StochLookbackperiod);
-			var LowRSI_Buffer = Lowest.Series(rsi, StochLookbackperiod);
+			var HiRSI_Buffer = Highest.Series(rsi, stochPeriod);
+			var LowRSI_Buffer = Lowest.Series(rsi, stochPeriod);
 
 			// Now we buffer the RSI minus the Low RSI value of the lookback period
 			// Doing the same for the High minus Low RSI value of the lookback period.
@@ -71,9 +70,8 @@ namespace QuantaculaIndicators
 			}
 
 			// Next action is creating the SMA of this 2 last values			
-			var StochSummingAverage = 8; // Stochastic SMA Smoothing
-			var ema_Buffer1 = SMA.Series(RSILow_Buffer, StochSummingAverage);
-			var ema_Buffer2 = SMA.Series(HiLow_Buffer, StochSummingAverage);
+			var ema_Buffer1 = SMA.Series(RSILow_Buffer, smaPeriod);
+			var ema_Buffer2 = SMA.Series(HiLow_Buffer, smaPeriod);
 
 			// Finally the Stochastics formula is applied
 			// %K = (Current Close - Lowest Low)/(Highest High - Lowest Low) * 100
