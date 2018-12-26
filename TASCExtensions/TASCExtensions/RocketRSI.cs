@@ -11,12 +11,16 @@ namespace TASCExtensions
         //constructors
         public RocketRSI()
         {
+            OverboughtLevel = 2;
+            OversoldLevel = -2;
         }
         public RocketRSI(TimeSeries source, int smoothLegth, int rsiLength)
         {
             Parameters[0].Value = source;
             Parameters[1].Value = smoothLegth;
             Parameters[2].Value = rsiLength;
+            OverboughtLevel = 2;
+            OversoldLevel = -2;
             Populate();
         }
 
@@ -62,22 +66,6 @@ namespace TASCExtensions
             get
             {
                 return Color.DarkOrange;
-            }
-        }
-
-        //it's an oscillator
-        public override double OversoldLevel
-        {
-            get
-            {
-                return -2;
-            }
-        }
-        public override double OverboughtLevel
-        {
-            get
-            {
-                return 2;
             }
         }
 

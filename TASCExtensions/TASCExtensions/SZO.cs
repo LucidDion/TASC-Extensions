@@ -12,6 +12,8 @@ namespace TASCIndicators
         //parameterless constructor
         public SZO() : base()
         {
+            OverboughtLevel = 7;
+            OversoldLevel = -7;
         }
 
         //for code based construction
@@ -20,7 +22,8 @@ namespace TASCIndicators
         {
             Parameters[0].Value = source;
             Parameters[1].Value = period;
-
+            OverboughtLevel = 7;
+            OversoldLevel = -7;
             Populate();
         }
 
@@ -79,9 +82,5 @@ namespace TASCIndicators
         public override Color DefaultColor => Color.Black;
 
         public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
-
-        public override double OverboughtLevel => 7;
-
-        public override double OversoldLevel => -7;
     }    
 }

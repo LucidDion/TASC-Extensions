@@ -9,6 +9,8 @@ namespace QuantaculaIndicators
         //parameterless constructor
         public SVEStochRSI() : base()
         {
+            OverboughtLevel = 80;
+            OversoldLevel = 20;
         }
 
 		//for code based construction
@@ -19,8 +21,9 @@ namespace QuantaculaIndicators
 			Parameters[1].Value = rsiPeriod;
 			Parameters[2].Value = stochPeriod;
 			Parameters[2].Value = smaPeriod;
-
-			Populate();
+            OverboughtLevel = 80;
+            OversoldLevel = 20;
+            Populate();
 		}
 
 		//static Series method
@@ -93,9 +96,5 @@ namespace QuantaculaIndicators
         public override Color DefaultColor => Color.Blue;
 
         public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
-
-        public override double OverboughtLevel => 80;
-
-        public override double OversoldLevel => 20;
     }
 }

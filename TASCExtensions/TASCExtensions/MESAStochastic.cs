@@ -12,6 +12,8 @@ namespace TASCIndicators
         //parameterless constructor
         public MESAStochastic() : base()
         {
+            OverboughtLevel = 0.8;
+            OversoldLevel = 0.2;
         }
 
         //for code based construction
@@ -20,7 +22,8 @@ namespace TASCIndicators
         {
             Parameters[0].Value = source;
             Parameters[1].Value = period;
-
+            OverboughtLevel = 0.8;
+            OversoldLevel = 0.2;
             Populate();
         }
 
@@ -97,10 +100,6 @@ namespace TASCIndicators
                 }
             }
         }
-
-        public override double OverboughtLevel => 0.8;
-
-        public override double OversoldLevel => 0.2;
 
         public override string Name => "MESAStochastic";
 

@@ -95,6 +95,7 @@ namespace TASCExtensions
         {
             //resolve parameters
             TimeSeries source = Parameters[0].AsTimeSeries;
+            DateTimes = source.DateTimes;
             int maPeriod = Parameters[1].AsInt;
             int period = Parameters[2].AsInt;
 

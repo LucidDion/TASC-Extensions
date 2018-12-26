@@ -12,6 +12,8 @@ namespace TASCIndicators
         //parameterless constructor
         public VolatilitySwitch() : base()
         {
+            OverboughtLevel = 0.5;
+            OversoldLevel = 0.499;
         }
 
         //for code based construction
@@ -20,7 +22,8 @@ namespace TASCIndicators
         {
             Parameters[0].Value = source;
             Parameters[1].Value = period;
-
+            OverboughtLevel = 0.5;
+            OversoldLevel = 0.499;
             Populate();
         }
 
@@ -76,10 +79,6 @@ namespace TASCIndicators
         public override string PaneTag => @"VolatilitySwitch";
 
         public override Color DefaultColor => Color.DarkGreen;
-
-        public override double OverboughtLevel => 0.5;
-
-        public override double OversoldLevel => 0.499;
 
         public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
     }    
