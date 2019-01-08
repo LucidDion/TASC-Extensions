@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace TASCIndicators
 {
-    public enum SVEHLZZperc_Type { Percent, ATR, Combined }
+    public enum SVEHLZZperc_Type { Percent, ATR, Combined, Point }
 
     public class SVEHLZZperc : IndicatorBase
     {
@@ -92,6 +92,9 @@ namespace TASCIndicators
                         case SVEHLZZperc_Type.Combined:
                             Reverse = HPrice - (HPrice * (change * 0.01) + atrValue);
                             break;
+                        case SVEHLZZperc_Type.Point:
+                            Reverse = HPrice - change * bars.TickSize;
+                            break;
                         default:
                             break;
                     }
@@ -112,6 +115,9 @@ namespace TASCIndicators
                             case SVEHLZZperc_Type.Combined:
                                 Reverse = LPrice + (atrValue + LPrice * (change * 0.01));
                                 break;
+                            case SVEHLZZperc_Type.Point:
+                                Reverse = LPrice + change * bars.TickSize;
+                                break;
                             default:
                                 break;
                         }
@@ -130,6 +136,9 @@ namespace TASCIndicators
                             break;
                         case SVEHLZZperc_Type.Combined:
                             Reverse = LPrice + (atrValue + LPrice * (change * 0.01));
+                            break;
+                        case SVEHLZZperc_Type.Point:
+                            Reverse = LPrice + change * bars.TickSize;
                             break;
                         default:
                             break;
@@ -150,6 +159,9 @@ namespace TASCIndicators
                                 break;
                             case SVEHLZZperc_Type.Combined:
                                 Reverse = HPrice - (HPrice * (change * 0.01) + atrValue);
+                                break;
+                            case SVEHLZZperc_Type.Point:
+                                Reverse = HPrice - change * bars.TickSize;
                                 break;
                             default:
                                 break;
