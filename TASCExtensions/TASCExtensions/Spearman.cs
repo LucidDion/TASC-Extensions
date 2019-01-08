@@ -13,6 +13,8 @@ namespace TASCIndicators
         //parameterless constructor
         public Spearman() : base()
         {
+            OverboughtLevel = -80;
+            OversoldLevel = 80;
         }
 
         //for code based construction
@@ -21,7 +23,8 @@ namespace TASCIndicators
         {
             Parameters[0].Value = source;
             Parameters[1].Value = period;
-
+            OverboughtLevel = -80;
+            OversoldLevel = 80;
             Populate();
         }
 
@@ -122,10 +125,6 @@ namespace TASCIndicators
         public override Color DefaultColor => Color.Blue;
 
         public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
-
-        public override double OverboughtLevel => -80;
-
-        public override double OversoldLevel => 80;
     }
 }
 

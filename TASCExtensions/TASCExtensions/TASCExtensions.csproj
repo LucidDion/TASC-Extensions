@@ -140,6 +140,7 @@
     <Compile Include="SVEHaTypCross.cs" />
     <Compile Include="SVEHLZZperc.cs" />
     <Compile Include="SVERBStochK.cs" />
+    <Compile Include="SVEStochRSI.cs" />
     <Compile Include="SVEVolatilityBands.cs" />
     <Compile Include="SveVolatilityBands2.cs" />
     <Compile Include="SVEZLRBPercB.cs" />

@@ -12,6 +12,8 @@ namespace TASCIndicators
         //parameterless constructor
         public Stress() : base()
         {
+            OverboughtLevel = 10;
+            OversoldLevel = 90;
         }
 
         //for code based construction
@@ -21,7 +23,8 @@ namespace TASCIndicators
             Parameters[0].Value = bars;
             Parameters[1].Value = index;
             Parameters[2].Value = period;
-
+            OverboughtLevel = 10;
+            OversoldLevel = 90;
             Populate();
         }
 
@@ -61,10 +64,6 @@ namespace TASCIndicators
                     Values[bar] = Stress[bar];
             }
         }
-
-        public override double OverboughtLevel => 10;
-
-        public override double OversoldLevel => 90;
 
         public override string Name => "Stress";
 

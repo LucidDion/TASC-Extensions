@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Drawing;
 using QuantaculaCore;
 using QuantaculaIndicators;
@@ -78,9 +76,5 @@ namespace TASCIndicators
         public override Color DefaultColor => Color.Black;
 
         public override PlotStyles DefaultPlotStyle => PlotStyles.ThickLine;
-
-        public override double OverboughtLevel => base.OverboughtLevel;
-
-        public override double OversoldLevel => base.OversoldLevel;
     }    
 }

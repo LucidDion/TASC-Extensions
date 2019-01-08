@@ -12,6 +12,8 @@ namespace TASCIndicators
         //parameterless constructor
         public SVSI() : base()
         {
+            OverboughtLevel = 80;
+            OversoldLevel = 20;
         }
 
         //for code based construction
@@ -21,7 +23,8 @@ namespace TASCIndicators
             Parameters[0].Value = bars;
             Parameters[1].Value = svsiPeriod;
             Parameters[2].Value = wmaPeriod;
-
+            OverboughtLevel = 80;
+            OversoldLevel = 20;
             Populate();
         }
 
@@ -76,9 +79,5 @@ namespace TASCIndicators
         public override Color DefaultColor => Color.Coral;
 
         public override PlotStyles DefaultPlotStyle => PlotStyles.Line;
-
-        public override double OverboughtLevel => 80;
-
-        public override double OversoldLevel => 20;
     }    
 }
