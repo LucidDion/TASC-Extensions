@@ -138,6 +138,7 @@
     <Compile Include="SuperSmoother.cs" />
     <Compile Include="SVAPO.cs" />
     <Compile Include="SVEHaTypCross.cs" />
+    <Compile Include="SveHLZigZagTicks.cs" />
     <Compile Include="SVEHLZZperc.cs" />
     <Compile Include="SVERBStochK.cs" />
     <Compile Include="SVEStochRSI.cs" />
