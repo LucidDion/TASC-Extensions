@@ -48,10 +48,10 @@ namespace TASCIndicators
         {
             BarHistory bars = Parameters[0].AsBarHistory;
             Int32 change = Parameters[1].AsInt;
-            var ticks = Ticks * bars.TickSize;
+            var ticks = change;// * bars.TickSize;
             DateTimes = bars.DateTimes;
 
-            if (period <= 0 || bars.Count == 0)
+            if (bars.Count == 0)
                 return;
 
             int CurrentTrend = 0;
@@ -59,10 +59,8 @@ namespace TASCIndicators
             double HPrice = 0;
             double LPrice = 0;
 
-            for (int bar = period; bar < bars.Count; bar++)
+            for (int bar = 0; bar < bars.Count; bar++)
             {
-                double atrValue = atr[bar] * factor;
-
                 if (CurrentTrend >= 0)   // trend is up, look for new swing high
                 {
                     HPrice = Math.Max(bars.High[bar], HPrice);
