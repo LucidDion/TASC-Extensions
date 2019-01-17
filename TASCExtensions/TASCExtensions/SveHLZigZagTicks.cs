@@ -15,7 +15,7 @@ namespace TASCIndicators
 
         public override string HelpDescription => "Sylvain Vervoort's SVEHLZigZagTicks indicator from September 2018 issue of Stocks & Commodities magazine";
 
-        public override string PaneTag => @"SVEHLZigZagTicks";
+        public override string PaneTag => @"Price";
 
         public override Color DefaultColor => Color.Blue;
 
