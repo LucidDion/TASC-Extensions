@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alpha.cs" />
+    <Compile Include="AEMA.cs" />
     <Compile Include="AMA.cs" />
     <Compile Include="APTR.cs" />
     <Compile Include="ARSI.cs" />

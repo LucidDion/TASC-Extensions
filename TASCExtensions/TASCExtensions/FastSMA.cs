@@ -92,6 +92,11 @@ namespace TASCIndicators
             }
         }
 
+        public static FastSMA Series(TimeSeries source, int period)
+        {
+            return new FastSMA(source, period);
+        }
+
         public override bool IsSmoother => true;
 
         public override string Name => "FastSMA";
