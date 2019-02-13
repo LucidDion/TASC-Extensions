@@ -43,6 +43,10 @@ namespace TASCIndicators
                 return Color.DarkBlue;
             }
         }
+
+        //it's a smoother
+        public override bool IsSmoother => true;
+
         public AEMA()
         {
         }
