@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
@@ -89,6 +89,8 @@ namespace TASCIndicators
 				// Metastock Alert function resource:
 				// http://www.meta-formula.com/metastock-alert-function.html
 
+				bool newCondition = (bars.Close[bar] > haC[bar]) || (bars.High[bar] > bars.High[bar - 1] || bars.Low[bar] > bars.Low[bar - 1]);
+				
 				if( !keep1 )
 				{
 					if( haC[bar] >= HO[bar] )	
@@ -103,7 +105,8 @@ namespace TASCIndicators
 				}
 				
 				keep2 = ( ZlDif[bar] >= 0 );
-				keeping = ( keep1 || keep2 );
+				//keeping = ( keep1 || keep2 );
+				keeping = ( (keep1 || newCondition) || keep2 ); //20190217 "newCondition" should be evaluated on each bar
 
                 // Save bar when "keeping" is true
 				if( keeping ) keepingBar = bar; else keepingBar = 0;
