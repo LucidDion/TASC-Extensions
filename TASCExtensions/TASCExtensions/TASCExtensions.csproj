@@ -168,6 +168,7 @@
     <Compile Include="WeeklyDailyMACD.cs" />
     <Compile Include="WilsonRSIChannel.cs" />
     <Compile Include="WPPO.cs" />
+    <Compile Include="ZScore.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
