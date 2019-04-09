@@ -82,7 +82,7 @@ namespace TASCExtensions
             S2 = 1d / G2 - Math.Sqrt(1d / (G2 * G2) - 1);
             L3 = Math.Cos(360 / (period / 3d) * Deg2Rad);
             G3 = Math.Cos(Bandwidth * 360 / (period / 3d) * Deg2Rad);
-            S3 = 1d / G3 - Math.Sqrt(1d / (G3 * G2) - 1);
+            S3 = 1d / G3 - Math.Sqrt(1d / (G3 * G3) - 1);
 
             for (int i = 0; i < FirstValidValue; i++)
             {
@@ -231,7 +231,7 @@ namespace TASCExtensions
             S2 = 1d / G2 - Math.Sqrt(1d / (G2 * G2) - 1);
             L3 = Math.Cos(360 / (period / 3d) * Deg2Rad);
             G3 = Math.Cos(Bandwidth * 360 / (period / 3d) * Deg2Rad);
-            S3 = 1d / G3 - Math.Sqrt(1d / (G3 * G2) - 1);
+            S3 = 1d / G3 - Math.Sqrt(1d / (G3 * G3) - 1);
 
             for (int i = 0; i < FirstValidValue; i++)
             {
