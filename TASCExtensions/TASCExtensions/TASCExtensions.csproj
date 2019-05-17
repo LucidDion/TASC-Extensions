@@ -71,6 +71,7 @@
     <Compile Include="EC.cs" />
     <Compile Include="EMA2.cs" />
     <Compile Include="ESDBands.cs" />
+    <Compile Include="ExpDevBands.cs" />
     <Compile Include="FAMA.cs" />
     <Compile Include="FastSMA.cs" />
     <Compile Include="FDSO.cs" />
