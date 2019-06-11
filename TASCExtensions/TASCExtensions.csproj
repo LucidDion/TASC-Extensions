@@ -71,6 +71,7 @@
     <Compile Include="ExpDevBands.cs" />
     <Compile Include="FAMA.cs" />
     <Compile Include="FastSMA.cs" />
+    <Compile Include="VossPredictor.cs" />
     <Compile Include="FDSO.cs" />
     <Compile Include="FIRSmoother.cs" />
     <Compile Include="Fisher.cs" />
