@@ -132,6 +132,7 @@
     <Compile Include="SimpleDecycler.cs" />
     <Compile Include="Spearman.cs" />
     <Compile Include="SRSI.cs" />
+	<Compile Include="STMACD.cs" />
     <Compile Include="Stiffness.cs" />
     <Compile Include="Stress.cs" />
     <Compile Include="SuperPassband.cs" />
