@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="QuantaculaCore">
-      <HintPath>..\..\..\..\Quantacula6\QuantacularCore\bin\Debug\QuantaculaCore.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Repos\Quantacula\QuantaculaIndicators\bin\Debug\QuantaculaCore.dll</HintPath>
     </Reference>
     <Reference Include="QuantaculaIndicators">
-      <HintPath>..\..\..\..\Quantacula6\QuantaculaIndicators\bin\Debug\QuantaculaIndicators.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Repos\Quantacula\QuantaculaIndicators\bin\Debug\QuantaculaIndicators.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -136,6 +136,7 @@
     <Compile Include="Spearman.cs" />
     <Compile Include="SRSI.cs" />
     <Compile Include="Stiffness.cs" />
+    <Compile Include="STMACD.cs" />
     <Compile Include="Stress.cs" />
     <Compile Include="SuperPassband.cs" />
     <Compile Include="SuperSmoother.cs" />
