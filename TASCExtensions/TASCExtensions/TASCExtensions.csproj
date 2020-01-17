@@ -113,6 +113,7 @@
     <Compile Include="PZO.cs" />
     <Compile Include="QuotientTransform.cs" />
     <Compile Include="RainbowOsc.cs" />
+    <Compile Include="Reflex.cs" />
     <Compile Include="RegEMA.cs" />
     <Compile Include="RelVol.cs" />
     <Compile Include="RevEngBBandCross.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="TCFPlus.cs" />
     <Compile Include="TEMA_TASC.cs" />
     <Compile Include="TrendB.cs" />
+    <Compile Include="TrendFlex.cs" />
     <Compile Include="TrendQ.cs" />
     <Compile Include="TrueHigh.cs" />
     <Compile Include="TrueLow.cs" />
