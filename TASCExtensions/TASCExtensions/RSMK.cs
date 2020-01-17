@@ -61,14 +61,16 @@ namespace TASCIndicators
         protected override void GenerateParameters()
         {
             base.AddParameter("Source", ParameterTypes.TimeSeries, PriceComponents.Close); 
-			base.AddParameter("Index", ParameterTypes.TimeSeries, PriceComponents.Close); 
+			base.AddParameter("Index Symbol", ParameterTypes.String, "SPY"); 
             base.AddParameter("Lookback Period", ParameterTypes.Int32, 90);
             base.AddParameter("EMA Period", ParameterTypes.Int32, 3);
         }
         public override void Populate()
         {
             TimeSeries ds = base.Parameters[0].AsTimeSeries;
-			TimeSeries index = base.Parameters[1].AsTimeSeries;
+            string symbol = Parameters[1].AsString;
+            BarHistory idx = IndicatorFactory.GetHistory(ds, symbol, Bars.Scale);
+            TimeSeries index = idx.Close;
             int period = base.Parameters[2].AsInt;
             int emaPeriod = base.Parameters[3].AsInt;
             this.DateTimes = ds.DateTimes;
