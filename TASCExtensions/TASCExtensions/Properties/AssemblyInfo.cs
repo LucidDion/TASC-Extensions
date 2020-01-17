@@ -11,7 +11,7 @@ using QuantaculaCore;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Quantacula LLC")]
 [assembly: AssemblyProduct("TASCExtensions")]
-[assembly: AssemblyCopyright("Copyright ©  2018-2019")]
+[assembly: AssemblyCopyright("Copyright ©  2018-2020")]
 [assembly: AssemblyTrademark("Quantacula LLC")]
 [assembly: AssemblyCulture("")]
 [assembly: MinimumQNumber(152)]
@@ -34,5 +34,5 @@ using QuantaculaCore;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.24.0")]
-[assembly: AssemblyFileVersion("2.0.24.0")]
+[assembly: AssemblyVersion("2.0.25.0")]
+[assembly: AssemblyFileVersion("2.0.25.0")]

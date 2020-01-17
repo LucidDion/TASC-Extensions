@@ -123,6 +123,7 @@
     <Compile Include="RocketRSI.cs" />
     <Compile Include="RoofingFilter.cs" />
     <Compile Include="RSIBand.cs" />
+    <Compile Include="RSMK.cs" />
     <Compile Include="RSS.cs" />
     <Compile Include="RWIHigh.cs" />
     <Compile Include="RWILow.cs" />
