@@ -32,17 +32,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="QuantaculaCore">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Quantacula, LLC\Quantacula Studio\QuantaculaCore.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\Repos\Quantacula\QuantaculaIndicators\bin\Debug\QuantaculaCore.dll</HintPath>
     </Reference>
     <Reference Include="QuantaculaIndicators">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Quantacula, LLC\Quantacula Studio\QuantaculaIndicators.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\..\Repos\Quantacula\QuantaculaIndicators\bin\Debug\QuantaculaIndicators.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alpha.cs" />
@@ -58,6 +61,7 @@
     <Compile Include="BullPowerVG.cs" />
     <Compile Include="CandleCode.cs" />
     <Compile Include="CG.cs" />
+    <Compile Include="CorrelationAngle.cs" />
     <Compile Include="CorrelationTrend.cs" />
     <Compile Include="CyberCycle.cs" />
     <Compile Include="CyclicComponent.cs" />
@@ -72,11 +76,11 @@
     <Compile Include="ExpDevBands.cs" />
     <Compile Include="FAMA.cs" />
     <Compile Include="FastSMA.cs" />
-    <Compile Include="VossPredictor.cs" />
     <Compile Include="FDSO.cs" />
     <Compile Include="FIRSmoother.cs" />
     <Compile Include="Fisher.cs" />
     <Compile Include="FOM.cs" />
+    <Compile Include="FourierSeries.cs" />
     <Compile Include="FractDim.cs" />
     <Compile Include="FRAMA.cs" />
     <Compile Include="FVE.cs" />
@@ -111,6 +115,7 @@
     <Compile Include="PZO.cs" />
     <Compile Include="QuotientTransform.cs" />
     <Compile Include="RainbowOsc.cs" />
+    <Compile Include="Reflex.cs" />
     <Compile Include="RegEMA.cs" />
     <Compile Include="RelVol.cs" />
     <Compile Include="RevEngBBandCross.cs" />
@@ -134,8 +139,8 @@
     <Compile Include="SimpleDecycler.cs" />
     <Compile Include="Spearman.cs" />
     <Compile Include="SRSI.cs" />
-	<Compile Include="STMACD.cs" />
     <Compile Include="Stiffness.cs" />
+    <Compile Include="STMACD.cs" />
     <Compile Include="Stress.cs" />
     <Compile Include="SuperPassband.cs" />
     <Compile Include="SuperSmoother.cs" />
@@ -154,6 +159,7 @@
     <Compile Include="TCFPlus.cs" />
     <Compile Include="TEMA_TASC.cs" />
     <Compile Include="TrendB.cs" />
+    <Compile Include="TrendFlex.cs" />
     <Compile Include="TrendQ.cs" />
     <Compile Include="TrueHigh.cs" />
     <Compile Include="TrueLow.cs" />
@@ -170,6 +176,7 @@
     <Compile Include="WeeklyDailyMACD.cs" />
     <Compile Include="WilsonRSIChannel.cs" />
     <Compile Include="WPPO.cs" />
+    <Compile Include="ZScore.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
