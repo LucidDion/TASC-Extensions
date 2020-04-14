@@ -61,6 +61,7 @@
     <Compile Include="BullPowerVG.cs" />
     <Compile Include="CandleCode.cs" />
     <Compile Include="CG.cs" />
+    <Compile Include="CorrelationAngle.cs" />
     <Compile Include="CorrelationTrend.cs" />
     <Compile Include="CyberCycle.cs" />
     <Compile Include="CyclicComponent.cs" />
